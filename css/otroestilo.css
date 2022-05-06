@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+
+.grilla{
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas:" header header"
+                        " conte   conte"
+                        "footer footer";
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(3, auto);
+}
+
+/* NAV */
+.encabezado{
+    grid-area: header;
+}
+
+.navbar {
+    margin: 15px;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.0);
+    border-color: rgba(0,0,0,.0);
+}
+@media screen and (min-width:320px) and (max-width: 479px) {
+    .navbar-brand{
+        font-size: 15px;
+    }
+    .navbar-toggler{
+        padding: 0.40rem 0;
+        font-size: 1rem;
+    }
+    
+}
+
+/* --------------------------------- */
+
+
+/* MENU */
+
+.contenido{
+    grid-area: conte;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.banner h2{
+    font-size: 50px;
+    font-weight: 15;
+    letter-spacing: 10px;
+}
+
+@media screen and (min-width:320px) and (max-width: 479px) {
+    .banner h2{
+        font-size: 30px;
+    }
+}
+/* --------------------------------- */
+
+
+/* FOOTER */
+
+.pie{
+    grid-area: footer;
+    /* background-color: #ffff; */
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.pie p{
+    margin: 20px 0;
+    padding: 50px 0;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+@media screen and (min-width:320px) and (max-width: 479px){
+    .pie p{
+        padding: 50px;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+}
+
+
+
+/* --------------------------------- */
+
+
+
+/* GRILLA RETRATO */
+
+.galleryRetra{
+    width: 80%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 20px;
+    /* overflow: hidden; */
+}
+.retra{
+    display: flex;
+
+}
+.retra__img{
+    width: 100%;
+    box-shadow: 23px 28px 17px -24px rgba(0,0,0,0.79);
+    transition: 1s;
+}
+.retra__img:hover{
+    transform: scale(0.9);
+}
+
+/* MEDIA Q / RETRATOS */
+
+@media screen and (min-width:320px) and (max-width: 479px){
+    
+    .galleryRetra{
+        width: 95%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,auto);
+        gap: 5px;
+        
+    }
+    .retra__img{
+        width: 100%;
+        box-shadow: 20px 24px 13px -22px rgba(0,0,0,0.29);
+    }
+    #del{
+        width: 0;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 600px){
+    .galleryRetra{
+        width: 90%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,auto);
+        gap: 10px; 
+    }
+    #del{
+        width: 0;
+    }
+}
+
+/* --------------------------------- */
+
+/* TRABAJOS / PROYECTOS */
+
+.proyec{
+    width: 90%;
+    margin: 10px auto;
+}
+.proyec__conte{
+    background-color: rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 50px;
+    box-shadow: 5px 6px 12px -1px rgba(0,0,0,0.3);
+}
+.proyecimg{
+    width: 100%;
+}
+.descrip-titu{
+    margin: 10px;
+}
+
+
+/* MEDIA Q / TRABAJ-PROYEC */
+
+@media screen and (min-width:320px) and (max-width: 600px){
+    .proyec{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .proyec__conte{
+        background-color: rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        margin: 20px;
+        box-shadow: 5px 6px 12px -1px rgba(0,0,0,0.3);
+    }
+    .proyecimg{
+        width: 100%;
+    }
+    .descrip-titu{
+        margin: 10px;
+    }
+    .proyec__conte--box{
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 768px){
+    .proyec{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .proyec__conte{
+        background-color: rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        margin: 20px;
+        box-shadow: 5px 6px 12px -1px rgba(0,0,0,0.3);
+    }
+    .proyecimg{
+        width: 100%;
+    }
+    .descrip-titu{
+        margin: 10px;
+    }
+    .proyec__conte--box{
+        padding: 10px;
+    }
+}
+
+/* ----------------------------------------------------- */
+
+/* ACERCA DE MI */
+
+.contenedorojo{
+    width: 90%;
+    height: 100vh;
+    background-image: url(../img/eye.jpg);
+    margin: 40px auto;
+    overflow: hidden;
+}
+.sobremi{
+    display: flex;
+    flex-direction: column;
+    color: #d4d4d4;
+    text-align: center;
+    width: 40%;
+    padding: 60px 0 0 60px;
+}
+.sobremi__titu{
+    margin: 15px;
+    font-size: 2rem;
+}
+.sobremi__text{
+    font-size: 19px;
+    padding-bottom: 10px;
+}
+.sobremi__text--mas{
+    font-size: 19px;
+}
+
+/* MEDIA Q - ACERCA DE MI*/
+
+/* --------------------------- */
+
+/* CONTACTO */
+
+.formContainer{
+    background-color: #1212;
+    width: 60%;
+    margin: 30px auto;
+    padding: 100px 20px;
+}
+.texto1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.direccion{
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.direccion__p{
+    font-size: 15px;
+}
+.form{
+    text-align: center;
+}
+.form__label{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+}
+.form__input, .form__textarea{
+    width: 50%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #1210;
+    color: black;
+    border: none;
+    border-bottom: solid 3px ;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    
+}
+
+.form__textarea{
+    height: 90px;
+    resize: none;
+}
+.form__input:focus,.form__textarea:focus{
+    outline: none;
+}
+.form__input--submit{
+    background-color: rgba(66, 70, 66, 0.336);
+    margin-top: 20px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 20px;
+}
+.form__input--submit:hover{
+    background-color: rgba(66, 70, 66, 0.658);
+}
+
+.pie-fom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pf{
+    /* text-align: center; */
+    margin: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.gmail{
+    /* display: inline-block; */
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    font-size: 13px;
+}
+#telef{
+    font-size: 13px;
+}
+
+.iconform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.fa-instagram{
+    font-size: 25px;
+    color: black;
+}
+.fa-twitter{
+    font-size: 25px;
+    color: black;
+}
+
+/* MEDIA Q - CONTACTO */
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .formContainer {
+        width: 85%;
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+    .texto1 {
+        margin-bottom: 20px;
+    }
+    .direccion {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    .direccion__p {
+        font-size: 11px;
+    }
+    .form__label {
+        font-size: 12px;
+    }
+    .form__input, .form__textarea {
+        width: 80%;
+        padding: 5px;
+        font-size: 10px;
+    }
+    .form__textarea {
+        height: 70px;
+    }
+    .form__input--submit {
+        font-size: 13px;
+        padding: 10px;
+    }
+    #pf {
+        margin: 24px;
+        font-size: 13px;
+    }
+    .gmail {
+    margin: 5px;
+    font-size: 12px;
+    }
+    #telef {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:780px) {
+    .formContainer {
+        width: 75%;
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+    .texto1 {
+        margin-bottom: 20px;
+    }
+    .direccion {
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    .direccion__p {
+        font-size: 15px;
+    }
+    .form__label {
+        font-size: 15px;
+    }
+    .form__input, .form__textarea {
+        width: 60%;
+        padding: 8px;
+        font-size: 15px;
+    }
+    .form__textarea {
+        height: 85px;
+    }
+    .form__input--submit {
+        font-size: 15px;
+        padding: 15px;
+    }
+    #pf {
+        margin: 45px;
+        font-size: 15px;
+    }
+    .gmail {
+    font-size: 13px;
+    }
+    #telef {
+        font-size: 13px;
+    }
+}
+/* 
+@media screen and (min-width:320px) and (max-width: 479px){}
+
+MEDIDAS GUIA
+480px
+600px
+768px +++
+1024px
+1200px+++
+*/
